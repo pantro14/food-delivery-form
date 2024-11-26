@@ -1,4 +1,4 @@
-import { useFormContext, useFormState, useWatch } from "react-hook-form";
+import { useFormContext, useFormState } from "react-hook-form";
 import { Select } from "../../../controls/Select";
 import { CheckoutFormType } from "../../../types";
 import { useRenderCount } from "../../../utils/useRenderCounts";
@@ -26,11 +26,9 @@ export const CheckoutForm = () => {
     exact: true,
   });
 
-  const paymentMethod = useWatch({ name: "paymentMethod" });
-
   return (
     <>
-      <RenderCount />
+      {/* <RenderCount /> */}
       <div className="text-start fw-bold mt-4 mb-2">Checkout Details</div>
       <div className="row mb-2">
         <div className="col">

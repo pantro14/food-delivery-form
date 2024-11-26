@@ -10,11 +10,13 @@ export type DeliveryAddressFormType = {
   city: string;
   state: string;
 };
+export type OrderFoodItemType = { name: string; quantity: number };
 export type FoodDeliveryFormType = {
   address: DeliveryAddressFormType;
-} & FoodDeliveryMasterFormType &
+  foodItems: OrderFoodItemType[];
+} & MasterFoodDeliveryFormType &
   CheckoutFormType;
-export type FoodDeliveryMasterFormType = {
+export type MasterFoodDeliveryFormType = {
   orderNo: number;
   customerName: string;
   mobile: string;
